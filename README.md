@@ -58,7 +58,7 @@ The best recommended approach to validate the functions is by pasting the functi
 
 ## Authors
 
-* Pooja Srinath
+ Pooja Srinath
 
 ## Acknowledgments
 
