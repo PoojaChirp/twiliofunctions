@@ -64,7 +64,7 @@ The best recommended approach to validate the functions is by pasting the functi
 
 * Thanks to Anthony Wong, A Senior SE in Twilio for providing the inspiration to build this project. 
 
-##References
+## References
 
 * https://www.twilio.com/docs/runtime/functions#getting-started-with-serverless-and-twilio-functions
 * https://www.twilio.com/docs/runtime/functions/debugging
