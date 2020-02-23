@@ -1,4 +1,4 @@
-# twiliofunctions
+# Twilio Functions
 
 An app to demonstrate on how to call Twilio functions from another Twilio function and also connect to a local database through ngrok tunneling features.
 
