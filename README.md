@@ -62,7 +62,7 @@ The best recommended approach to validate the functions is by pasting the functi
 
 ## Acknowledgments
 
-* Thanks to Anthony Wong and Alan Klein, both Senior SE's at Twilio for providing the inspiration and required help to build this project. 
+Thanks to Anthony Wong and Alan Klein, both Senior SE's at Twilio for providing the inspiration and required help to build this project. 
 
 ## References
 
