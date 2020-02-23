@@ -1,29 +1,23 @@
 const mysql = require('mysql');
 const axios = require('axios');
 
-async function myFetch(){
+exports.handler = function(context, event, callback) {
+    context.callbackWaitsForEmptyEventLoop = false;
+    async function myFetch(){
     const config = await axios.get('https://ube-zebra-9736.twil.io/getcredientials')
     const db = new Database(config.data);
     db.connection.connect();
-    /*
-        const user = {
-        phone_number:'++13098787432',
-        first_name: 'Happy',
-        last_name:'debugging'
-     }
-     const users = await db.query('insert into users set ?',user);
-    */
     const users = await db.query('select * from users');
     await db.close();
-    console.log(users);
-}
+     callback(null, users);
+    }
    	        
-   	myFetch().catch (err =>{console.log(err);});                
+   	myFetch().catch (err =>{
+   	        callback(null, err);
+   	});      
+}
 class Database {
     constructor( config ) {
-        console.log("-----------------------------------------");
-        console.log(config);
-        console.log("-----------------------------------------");
         this.connection = mysql.createConnection( config );
     }
     query( sql, args ) {
