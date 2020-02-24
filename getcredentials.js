@@ -1,3 +1,5 @@
+// Fetch configuation data entered in the config dashboard
+
 exports.handler = function(context, event, callback) {
     const config = {
         host: context.host,
