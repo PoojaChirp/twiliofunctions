@@ -1,3 +1,4 @@
+// Connect to a localdatabase
 const mysql = require('mysql');
 const axios = require('axios');
 
