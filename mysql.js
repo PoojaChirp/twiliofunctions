@@ -1,17 +1,30 @@
-// Connect to a localdatabase
 const mysql = require('mysql');
-const axios = require('axios');
 
 exports.handler = async function(context, event, callback) {
     context.callbackWaitsForEmptyEventLoop = false;
+       const config = {
+        host: context.host,
+        port: context.port,
+        user: context.user,
+        password: context.password,
+        database: context.database
+    };
     
+    console.log("connected", config);
     try {
-        const config = await axios.get(`https://${context.DOMAIN_NAME}/getcredentials`);
-        const db = new Database(config.data);
         
-        db.connection.connect();
-        const users = await db.query('select * from users');
-        await db.close();
+       const db = new Database(config);
+       db.connection.connect();
+ 	   const user = {
+       phone_number:'+13098787432',
+       first_name: 'Happy',
+       last_name:'debugging'
+    };
+    const users = await db.query('insert into users set ?',user);
+    await db.close();
+     //   const users = await db.query('select * from users');
+     //   await db.close();
+        console.log(users);
         callback(null, users);
     } catch(e) {
         callback(e);
