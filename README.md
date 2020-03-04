@@ -50,12 +50,6 @@ TCP tunnels allow you to expose any networked service that runs over TCP and Ngr
 $ ngrok tcp 3306
 ```
 
-
-### Debugging the Functions
- 
-The best recommended approach to validate the functions is by pasting the function URl in the browser. This can be also validated using postman or Advanced rest client as shown below.
-
-
 ## Authors
 
  Pooja Srinath
